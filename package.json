@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Проект для отслеживания твитов.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "twitter": "^1.7.1"
+  },
   "devDependencies": {
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
