@@ -1,10 +1,11 @@
 {
   "name": "tweetracker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Проект для отслеживания твитов.",
   "main": "index.js",
   "dependencies": {
-    "twitter": "^1.7.1"
+    "cheerio": "^1.0.0-rc.2",
+    "nightmare": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
