@@ -13,12 +13,12 @@ try {
   (async () => {
     await twitter(config.nightmare, config.twitter, links.twitter);
     console.info('Проход завершён. Ожидайте следующего выполнения...');
-  })();
 
-  setInterval(async () => {
-    await twitter(config.nightmare, config.twitter, links.twitter);
-    console.info('Проход завершён. Ожидайте следующего выполнения...');
-  }, config.server.cron * 1000);
+    setInterval(async () => {
+      await twitter(config.nightmare, config.twitter, links.twitter);
+      console.info('Проход завершён. Ожидайте следующего выполнения...');
+    }, config.server.cron * 1000);
+  })();
 } catch (error) {
   console.error(`Ошибка запуска приложения: ${error.message}`);
 }
