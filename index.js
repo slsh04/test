@@ -10,6 +10,11 @@ try {
   console.info('Запуск приложения...');
 
   // запуск выполнения задачи для Twitter'а
+  (async () => {
+    await twitter(config.nightmare, config.twitter, links.twitter);
+    console.info('Проход завершён. Ожидайте следующего выполнения...');
+  })();
+
   setInterval(async () => {
     await twitter(config.nightmare, config.twitter, links.twitter);
     console.info('Проход завершён. Ожидайте следующего выполнения...');
