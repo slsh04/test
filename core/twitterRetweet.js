@@ -9,7 +9,8 @@ const retweet = async (app, url, { elements }) => {
       .wait(elements.retweetButton)
       .click(elements.retweetButton)
       .wait(elements.nextFrameClass)
-      .click(elements.retweetFrameButton);
+      .click(elements.retweetFrameButton)
+      .wait(5000);
   } catch (error) {
     throw new Error(`Ошибка ретвита записи в Twitter'е: ${error.message}`);
   }

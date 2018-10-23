@@ -21,7 +21,7 @@ module.exports.startTask = async () => {
     const app = nightmare.create(nightmareConfig);
 
     // авторизация в Twitter'е
-    await twitterAuth.authorize(app, twitterConfig.auth);
+    // await twitterAuth.authorize(app, twitterConfig.auth);
 
     // получение твитов Twitter'а
     const noValidTweets = await twitterChannel.getTweets(app, twitterLinks, twitterConfig);

@@ -23,14 +23,16 @@ const parseChannel = async (app, url, { configChannel, configTweet }) => {
         for (let count = 0; count < domTweets.length; count += 1) {
           const domTweet = domTweets[count];
           $ = cheerio.load(domTweet);
+
           if ($(domTweet).attr(configChannel.elements.id)) {
             tweets.push({
-              url,
-              id: $(domTweet).attr(configChannel.elements.id),
-              likes: $(configTweet.elements.likes).attr(configTweet.elements.likesAttr),
+              url: String(url),
+              id: Number($(domTweet).attr(configChannel.elements.id)),
+              likes: Number($(configTweet.elements.likes).val()),
             });
           }
         }
+        console.log(tweets);
         return tweets;
       });
   } catch (error) {

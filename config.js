@@ -29,7 +29,8 @@ module.exports.twitterConfig = {
       inputPassword: '.js-password-field',
       loginButton: '.clearfix .submit',
       nextPageClass: '.logged-in',
-      challengeClass: '#challenge_response',
+      challengePage: '#login-challenge-form',
+      inputChallenge: '#challenge_response',
       challengeButton: '#email_challenge_submit',
     },
   },
@@ -37,15 +38,14 @@ module.exports.twitterConfig = {
   tweets: {
     configChannel: {
       elements: {
-        content: '.tweet',
-        id: 'data-item-id',
+        content: '.content .tweet-timestamp',
+        id: 'data-conversation-id',
       },
     },
     configTweet: {
       key: '/status/',
       elements: {
-        likes: '.stream-item-footer .ProfileTweet-actionCount',
-        likesAttr: 'data-tweet-stat-count',
+        likes: '.ProfileTweet-actionCountForPresentation',
       },
     },
     configRetweet: {

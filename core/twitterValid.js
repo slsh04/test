@@ -11,8 +11,11 @@ module.exports.validate = (tweets, links, key) => {
         for (let countLink = 0; countLink < links.length; countLink += 1) {
           const tweet = tweets[countTweetFirst][countTweetSecond];
           const link = links[countLink];
-          if (tweet.url === link.url && tweet.likes >= link.needLikes) {
-            urls.push(tweet.url + key + tweet.id);
+          if (
+            String(tweet.url) === String(link.url)
+            && Number(tweet.likes) >= Number(link.needLikes)
+          ) {
+            urls.push(String(tweet.url + key + tweet.id));
           }
         }
       }

@@ -9,11 +9,12 @@ module.exports.authorize = async (app, { url, data, elements } = twitterConfig.a
       .goto(url)
       .type(elements.inputLogin, data.login)
       .type(elements.inputPassword, data.password)
-      .click(elements.loginButton);
+      .click(elements.loginButton)
+      .wait(5000);
 
     // проверка необходимости подтверждения личности
-    if (await app.exists(elements.challengeClass)) {
-      await app.type(elements.challengeClass, data.telephone).click(elements.challengeButton);
+    if (await app.exists(elements.challengePage)) {
+      await app.type(elements.inputChallenge, data.telephone).click(elements.challengeButton);
     }
 
     // ожидание перехода на следующую страницу
