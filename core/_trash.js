@@ -1,7 +1,8 @@
-// эмулятор браузера
-const nightmare = require('nightmare');
 // скрейпер
 const cheerio = require('cheerio');
+
+// ссылки для обработки
+const { twitterLinks } = require('../links');
 
 // функция очистки элементов
 const clearElement = (string) => {
@@ -103,7 +104,7 @@ const parsePage = async (emulator, configTwitter, link, needLikes) => {
 };
 
 // основная функция выполнения
-module.exports = async (configNightmare, configTwitter, linksTwitter) => {
+module.exports.getTweets = async (configNightmare, configTwitter, linksTwitter) => {
   try {
     const tweets = [];
 

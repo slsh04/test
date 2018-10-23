@@ -1,6 +1,6 @@
-module.exports.twitter = [
-  { link: 'https://twitter.com/BTCTN', needLikes: 30 },
-  { link: 'https://twitter.com/the_crypto_wire', needLikes: 10 },
-  { link: 'https://twitter.com/bitconnect', needLikes: 200 },
-  { link: 'https://twitter.com/EOS_io', needLikes: 200 },
+module.exports.twitterLinks = [
+  { url: 'https://twitter.com/BTCTN', needLikes: 0 },
+  { url: 'https://twitter.com/the_crypto_wire', needLikes: 0 },
+  { url: 'https://twitter.com/bitconnect', needLikes: 0 },
+  { url: 'https://twitter.com/EOS_io', needLikes: 0 },
 ];
